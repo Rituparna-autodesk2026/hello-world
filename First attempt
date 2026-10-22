@@ -1,0 +1,20 @@
+Alternative CAD platforms solve the user experience challenges seen in Autodesk Fusion by taking fundamentally different approaches to assembly architecture, UI isolation, and multi-part data management.
+Here is how competitors like Onshape and SolidWorks tackle these specific pain points more intuitively.
+
+1. Solving Discoverability: Clear Separation & Isolated Inspection
+
+In Fusion, joints live in a shared folder or scattered throughout a timeline, making it easy to lose track of what connects to what.
+• SolidWorks (Isolated "View Mates" Tool): Instead of making you dig through a massive tree, SolidWorks offers a dedicated View Mates command. You can right-click any individual part in the viewport or tree and instantly open a small, isolated pop-up showing only the mates tied to that component. Hovering over a mate in this pop-up dynamically highlights the face it is constrained to on both parts.
+• Onshape (Explicit Mate Connectors): Onshape completely separates the geometric reference from the relationship. Parts use predefined or on-the-fly Onshape Mate Connectors—visible coordinate systems fixed to geometry. Because these connectors are explicit entities, they are visually persistent, labeled, and easily searchable in the assembly tree, making it immediately clear exactly where and how two parts are bound.
+
+2. Solving Motion Control: Instant, In-Dialog Feedback
+
+Defining joint limits in Fusion often requires a frustrating cycle of opening dialogs, guessing values, closing them, and roughly dragging the part to test the behavior.
+• Onshape (Direct Dialog Animation): When configuring limits (like angles or travel distance) inside an Onshape mate dialog, a built-in "Play" button sits right next to the numeric inputs. You can loop the exact range of motion within the active command before saving it. Furthermore, you can right-click any mate and hit "Animate" to watch the entire surrounding kinematic chain solve smoothly in real time.
+• SolidWorks (Dynamic Advanced Mates): SolidWorks handles limits via Limit Mates. While the property manager dialog is wide open, the system allows you to actively drag the component with your mouse in the viewport. The part moves dynamically between the minimum and maximum numeric thresholds you are typing in, giving instant spatial confirmation of the boundary limits.
+
+3. Solving Workflow Consistency: Defining Clear Intent
+
+Fusion's hybrid approach—blending a history-based timeline with active component hierarchies, "Edit in Place," and browser navigation—frequently causes circular reference errors and mental fatigue.
+• Onshape (Part Studios vs. Assemblies): Onshape completely removes the timeline from the assembly stage to eliminate confusion. You design geometry sequentially using a feature list inside a Multi-Part Part Studio. You then move to an Assembly Tab, which contains zero design history—only geometric positioning and movement. If you need to modify a part while looking at the assembly, Onshape uses "Edit in Context." It takes a frozen, immutable visual snapshot of the assembly, removing the risk of timeline tracking shifts or unexpected parent-child breaks.
+• SolidWorks (Visual Transparency Context): SolidWorks uses traditional In-Context editing, but handles the visual hierarchy with strict consistency. Clicking "Edit Component" turns the rest of the assembly transparent and shifts the FeatureManager tree color. External references are clearly tagged with an explicit suffix (->), making it completely transparent to the user when a feature is dependent on another assembly component, avoiding the hidden timeline logic traps found in Fusion.
